@@ -15,7 +15,7 @@ const team = [
     id: 2,
     name: 'Gaurab Lohani',
     role: 'Full-Stack Developer, Content Creator, Advertisor',
-    image: './gaurablohani.png',
+    image: './gaurablohani.jpeg',
     social: { linkedin: '#', instagram: 'https://www.instagram.com/gaurablohani.py/', github: 'https://github.com/gaurablohani01/' },
   }
 ];
