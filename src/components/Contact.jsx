@@ -53,7 +53,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-gray-900 font-semibold mb-1">Email Us</h4>
-                    <p className="text-gray-600">hello@solveatlas.com</p>
+                    <p className="text-gray-600">solveatlas.agency@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -62,7 +62,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-gray-900 font-semibold mb-1">Call Us</h4>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <p className="text-gray-600">+977 9826197196 / 9762748494</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -71,7 +71,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-gray-900 font-semibold mb-1">Visit Us</h4>
-                    <p className="text-gray-600">123 Innovation Drive, Tech City, TC 90210</p>
+                    <p className="text-gray-600">Machapokhari, Kathmandu</p>
                   </div>
                 </div>
               </div>
