@@ -1,36 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaTwitter, FaGithub, FaInstagram } from 'react-icons/fa';
 
 const team = [
   {
     id: 1,
-    name: 'Alex Morgan',
-    role: 'Lead Developer',
+    name: 'Tilak Man Gubhaju',
+    role: 'Full-Stack Developer, UI/UX Desiginer',
     image: 'https://randomuser.me/api/portraits/men/46.jpg',
-    social: { linkedin: '#', twitter: '#', github: '#' },
+    social: { linkedin: '#', instagram: '#', github: '#' },
   },
   {
     id: 2,
-    name: 'Jessica Lee',
-    role: 'UI/UX Designer',
+    name: 'Gaurab Lohani',
+    role: 'Full-Stack Developer, Content Creator, Advertisor',
     image: 'https://randomuser.me/api/portraits/women/29.jpg',
-    social: { linkedin: '#', twitter: '#', github: '#' },
-  },
-  {
-    id: 3,
-    name: 'David Kim',
-    role: 'Project Manager',
-    image: 'https://randomuser.me/api/portraits/men/85.jpg',
-    social: { linkedin: '#', twitter: '#', github: '#' },
-  },
-  {
-    id: 4,
-    name: 'Sophia Martinez',
-    role: 'Marketing Specialist',
-    image: 'https://randomuser.me/api/portraits/women/90.jpg',
-    social: { linkedin: '#', twitter: '#', github: '#' },
-  },
+    social: { linkedin: '#', instagram: '#', github: '#' },
+  }
 ];
 
 const Team = () => {
@@ -44,7 +30,7 @@ const Team = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {team.map((member, index) => (
             <motion.div
               key={member.id}
@@ -52,7 +38,10 @@ const Team = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-primary rounded-2xl overflow-hidden shadow-lg group"
+              /* Below: w-full (1 col), sm:w-[calc(50%-2rem)] (2 cols), lg:w-[calc(25%-2rem)] (4 cols)
+                 This mimics your grid but allows for perfect centering.
+              */
+              className="bg-primary rounded-2xl overflow-hidden shadow-lg group w-full sm:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] max-w-[350px]"
             >
               <div className="relative overflow-hidden">
                 <img
@@ -62,7 +51,7 @@ const Team = () => {
                 />
                 <div className="absolute inset-0 bg-accent/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
                   <a href={member.social.linkedin} className="text-white hover:text-primary transition-colors text-xl"><FaLinkedin /></a>
-                  <a href={member.social.twitter} className="text-white hover:text-primary transition-colors text-xl"><FaTwitter /></a>
+                  <a href={member.social.instagram} className="text-white hover:text-primary transition-colors text-xl"><FaInstagram /></a>
                   <a href={member.social.github} className="text-white hover:text-primary transition-colors text-xl"><FaGithub /></a>
                 </div>
               </div>
