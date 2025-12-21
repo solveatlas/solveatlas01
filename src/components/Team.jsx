@@ -6,16 +6,16 @@ const team = [
   {
     id: 1,
     name: 'Tilak Man Gubhaju',
-    role: 'Full-Stack Developer, UI/UX Desiginer',
-    image: 'https://randomuser.me/api/portraits/men/46.jpg',
-    social: { linkedin: '#', instagram: '#', github: '#' },
+    role: 'Full-Stack Developer, UI/UX Desiginer, Content Writer',
+    image: './tilakgubhaju.jpg',
+    social: { linkedin: '#', instagram: 'https://www.instagram.com/its_zorotz/', github: 'https://github.com/Tilak-csd/' },
   },
   {
     id: 2,
     name: 'Gaurab Lohani',
     role: 'Full-Stack Developer, Content Creator, Advertisor',
-    image: 'https://randomuser.me/api/portraits/women/29.jpg',
-    social: { linkedin: '#', instagram: '#', github: '#' },
+    image: './gaurablohani.png',
+    social: { linkedin: '#', instagram: 'https://www.instagram.com/gaurablohani.py/', github: 'https://github.com/gaurablohani01/' },
   }
 ];
 
@@ -50,9 +50,9 @@ const Team = () => {
                   className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-accent/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                  <a href={member.social.linkedin} className="text-white hover:text-primary transition-colors text-xl"><FaLinkedin /></a>
-                  <a href={member.social.instagram} className="text-white hover:text-primary transition-colors text-xl"><FaInstagram /></a>
-                  <a href={member.social.github} className="text-white hover:text-primary transition-colors text-xl"><FaGithub /></a>
+                  <a href={member.social.linkedin} target='_blank' className="text-white hover:text-primary transition-colors text-xl"><FaLinkedin /></a>
+                  <a href={member.social.instagram} target='_blank' className="text-white hover:text-primary transition-colors text-xl"><FaInstagram /></a>
+                  <a href={member.social.github} target='_blank' className="text-white hover:text-primary transition-colors text-xl"><FaGithub /></a>
                 </div>
               </div>
               <div className="p-6 text-center">
