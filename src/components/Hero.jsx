@@ -62,8 +62,8 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight"
         >
-          We Build <span className="text-accent">Digital Experiences</span>
-          <br /> That Matter.
+           Creating <span className="text-accent">Digital Experiences</span>
+          <br /> With Purpose
         </motion.h1>
 
         <motion.p

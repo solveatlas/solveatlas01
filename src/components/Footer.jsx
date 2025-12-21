@@ -12,16 +12,16 @@ const Footer = () => {
         </div>
 
         <div className="flex space-x-6">
-          <a href="#" className="text-gray-500 hover:text-accent transition-colors text-xl">
+          <a href="https://www.instagram.com/solveatlas.agency/" target='_blank' className="text-gray-500 hover:text-accent transition-colors text-xl">
             <FaFacebook />
           </a>
-          <a href="#" className="text-gray-500 hover:text-accent transition-colors text-xl">
+          <a href="https://www.instagram.com/solveatlas.agency/" target='_blank' className="text-gray-500 hover:text-accent transition-colors text-xl">
             <FaTwitter />
           </a>
-          <a href="#" className="text-gray-500 hover:text-accent transition-colors text-xl">
+          <a href="https://www.instagram.com/solveatlas.agency/" target='_blank' className="text-gray-500 hover:text-accent transition-colors text-xl">
             <FaInstagram />
           </a>
-          <a href="#" className="text-gray-500 hover:text-accent transition-colors text-xl">
+          <a href="https://www.instagram.com/solveatlas.agency/" target='_blank' className="text-gray-500 hover:text-accent transition-colors text-xl">
             <FaLinkedin />
           </a>
         </div>

@@ -5,45 +5,27 @@ import { FaTimes, FaExternalLinkAlt } from 'react-icons/fa';
 const projects = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
+    title: 'Golden Future Academy Website',
     category: 'Web Development',
-    image: 'https://via.placeholder.com/600x400/1E2A47/4F79FF?text=E-Commerce',
-    description: 'A full-featured e-commerce platform with cart, checkout, and payment integration.',
+    image: './portfolio/golden_future_website.png',
+    description: 'A full-featured school website, with all features like adding the blog page, contact sections.',
+    view_page: "https://www.lamjunggfa.edu.np/"
   },
   {
     id: 2,
-    title: 'Finance Dashboard',
-    category: 'UI/UX Design',
-    image: 'https://via.placeholder.com/600x400/1E2A47/4F79FF?text=Dashboard',
-    description: 'A clean and intuitive dashboard for tracking financial data and analytics.',
+    title: 'Journey International Consultancy Website',
+    category: 'Consutancy Website',
+    image: './portfolio/journey_international_consultancy.png',
+    description: 'A clean and responsive PHP website, with all functional and live features.',
+    view_page :"https://journeyinteducation.com/"
   },
   {
     id: 3,
-    title: 'Travel Agency Site',
-    category: 'Web Design',
-    image: 'https://via.placeholder.com/600x400/1E2A47/4F79FF?text=Travel',
-    description: 'An immersive website for a travel agency featuring stunning visuals and booking system.',
-  },
-  {
-    id: 4,
-    title: 'Health App',
-    category: 'Mobile App',
-    image: 'https://via.placeholder.com/600x400/1E2A47/4F79FF?text=Health+App',
-    description: 'A mobile application for tracking health metrics and workout routines.',
-  },
-  {
-    id: 5,
-    title: 'Corporate Portal',
-    category: 'Custom Solution',
-    image: 'https://via.placeholder.com/600x400/1E2A47/4F79FF?text=Corporate',
-    description: 'A secure internal portal for employee management and resource sharing.',
-  },
-  {
-    id: 6,
-    title: 'Social Media Campaign',
-    category: 'Marketing',
-    image: 'https://via.placeholder.com/600x400/1E2A47/4F79FF?text=Marketing',
-    description: 'A successful social media campaign that increased brand engagement by 200%.',
+    title: 'Shrestha Cafe Website',
+    category: 'Dynamic Website',
+    image: './portfolio/shrestha_cafe_website.png',
+    description: 'An immersive website of a cafe & restaurant, with multiple features like making a reservation, contacting, adding new menus and News.',
+    view_page : "https://shresthacafe.vercel.app/"
   },
 ];
 
@@ -121,7 +103,7 @@ const Portfolio = () => {
                 </p>
                 
                 <a
-                  href="#"
+                  href={selectedProject.view_page} target='_blank'
                   className="inline-flex items-center gap-2 bg-accent hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
                 >
                   View Project <FaExternalLinkAlt size={14} />
