@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import TeamPage from './pages/TeamPage';
 import ScrollToTop from './components/ScrollToTop';
+import AgencyPricing from './pages/Pricing';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/team" element={<TeamPage />} />
+          <Route path="/pricing" element={<AgencyPricing />} />
         </Routes>
         <Footer />
       </div>

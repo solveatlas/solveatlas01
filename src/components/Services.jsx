@@ -49,7 +49,10 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-primary p-8 rounded-2xl shadow-lg hover:shadow-accent/20 hover:-translate-y-2 transition-all duration-300 border border-gray-200"
+              // ADD THIS LINE:
+              whileHover={{ y: -5,transition: { duration: 0.2 }  }}
+              // REMOVE 'hover:-translate-y-10' and 'transform' from className:
+              className="bg-primary p-8 rounded-2xl shadow-lg transition-shadow duration-300 hover:shadow-accent/20 border border-gray-200 cursor-pointer"
             >
               <div className="text-4xl text-accent mb-6">{service.icon}</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
