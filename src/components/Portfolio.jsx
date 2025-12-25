@@ -17,7 +17,7 @@ const projects = [
     category: 'Consutancy Website',
     image: './portfolio/journey_international_consultancy.png',
     description: 'A clean and responsive PHP website, with all functional and live features.',
-    view_page :"https://journeyinteducation.com/"
+    view_page: "https://journeyinteducation.com/"
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const projects = [
     category: 'Dynamic Website',
     image: './portfolio/shrestha_cafe_website.png',
     description: 'An immersive website of a cafe & restaurant, with multiple features like making a reservation, contacting, adding new menus and News.',
-    view_page : "https://shresthacafe.vercel.app/"
+    view_page: "https://shresthacafe.vercel.app/"
   },
 ];
 
@@ -35,12 +35,17 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="py-20 bg-primary">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Portfolio</h2>
-          <p className="text-gray-600 max-w-xl mx-auto">
-            Check out some of our recent work and see how we help businesses thrive.
-          </p>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <h2 className="text-indigo-600 font-bold uppercase tracking-widest text-sm mb-3">Portfolio</h2>
+          <h3 className="text-4xl md:text-5xl font-black text-slate-900">
+            Crafting Digital <br />Experiences.
+          </h3>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
@@ -88,20 +93,20 @@ const Portfolio = () => {
               >
                 <FaTimes size={20} />
               </button>
-              
+
               <img
                 src={selectedProject.image}
                 alt={selectedProject.title}
                 className="w-full h-80 object-cover"
               />
-              
+
               <div className="p-8">
                 <h3 className="text-3xl font-bold text-gray-900 mb-2">{selectedProject.title}</h3>
                 <p className="text-accent font-medium mb-6">{selectedProject.category}</p>
                 <p className="text-gray-600 leading-relaxed mb-8">
                   {selectedProject.description}
                 </p>
-                
+
                 <a
                   href={selectedProject.view_page} target='_blank'
                   className="inline-flex items-center gap-2 bg-accent hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
@@ -118,3 +123,4 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+

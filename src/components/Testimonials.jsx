@@ -130,7 +130,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="bg-white py-24 px-6 overflow-hidden">
+    <section id='testimonials' className="bg-white py-24 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         
         {/* Animated Header */}
@@ -158,7 +158,7 @@ const Testimonials = () => {
             <motion.div 
               key={idx}
               variants={cardVariants}
-              whileHover={{ y: -10, transition: { duration: 0.2 } }}
+              whileHover={{ y: -8, transition: { duration: 0.2 } }}
               className={`relative p-8 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:shadow-2xl hover:bg-white transition-colors duration-300 flex flex-col justify-between ${
                 review.size === 'large' ? 'md:col-span-2' : ''
               }`}
