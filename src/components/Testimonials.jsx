@@ -122,32 +122,33 @@ const Testimonials = () => {
 
   const cardVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { duration: 0.6, ease: "easeOut" } 
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
     }
   };
 
   return (
-    <section id='testimonials' className="bg-white py-24 px-6 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        
+        <section id="testimonials" className="py-20 bg-secondary">
+      <div className="container mx-auto px-8 md:px-16">
+
         {/* Animated Header */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          className="mb-16"
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="mb-16 font-arvo"
         >
-          <h2 className="text-indigo-600 font-bold uppercase tracking-widest text-sm mb-3">Client Stories</h2>
+          <h2 className="text-gray-500 font-bold uppercase tracking-widest text-sm mb-3">Client Stories</h2>
           <h3 className="text-4xl md:text-5xl font-black text-slate-900">
-            Trusted by businesses <br /> across the country.
+            Trusted By Businesses <br /> Across The Country
           </h3>
         </motion.div>
 
         {/* Animated Grid */}
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -155,23 +156,21 @@ const Testimonials = () => {
           className="grid grid-cols-1 md:grid-cols-3 gap-6"
         >
           {reviews.map((review, idx) => (
-            <motion.div 
+            <motion.div
               key={idx}
               variants={cardVariants}
               whileHover={{ y: -8, transition: { duration: 0.2 } }}
-              className={`relative p-8 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:shadow-2xl hover:bg-white transition-colors duration-300 flex flex-col justify-between ${
-                review.size === 'large' ? 'md:col-span-2' : ''
-              }`}
+              className={`relative p-8  bg-slate-50 border border-slate-100 hover:shadow-2xl hover:bg-white transition-colors duration-300 flex flex-col justify-between ${review.size === 'large' ? 'md:col-span-2' : ''
+                }`}
             >
               <Quote className="absolute top-8 right-8 text-slate-200" size={40} />
-              
+
               <div>
                 <div className="flex text-yellow-400 mb-6">
                   {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
                 </div>
-                <p className={`text-slate-700 font-medium leading-relaxed mb-8 ${
-                  review.size === 'large' ? 'text-2xl' : 'text-lg'
-                }`}>
+                <p className={`text-slate-700 font-open_sans font-medium leading-relaxed mb-8 ${review.size === 'large' ? 'text-xl md:text-2xl' : 'text-md md:text-lg'
+                  }`}>
                   "{review.text}"
                 </p>
               </div>
@@ -179,8 +178,8 @@ const Testimonials = () => {
               <div className="flex items-center gap-4">
                 <img src={review.image} alt={review.name} className="w-12 h-12 rounded-2xl object-cover" />
                 <div>
-                  <h4 className="font-bold text-slate-900">{review.name}</h4>
-                  <p className="text-sm text-slate-500 font-medium">{review.role}</p>
+                  <h4 className="font-bold text-slate-900 font-arvo">{review.name}</h4>
+                  <p className="text-sm text-slate-500 font-medium font-open_sans">{review.role}</p>
                 </div>
               </div>
             </motion.div>

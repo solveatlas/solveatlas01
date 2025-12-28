@@ -22,8 +22,8 @@ const team = [
 
 const Team = () => {
   return (
-    <section id="team" className="py-6 bg-secondary">
-      <div className="container mx-auto px-6">
+    <section id="team" className="py-2 bg-secondary">
+      <div className="container mx-auto px-8 md:px-16">
 
         <div className="flex flex-wrap justify-center gap-8">
           {team.map((member, index) => (
@@ -36,7 +36,7 @@ const Team = () => {
               /* Below: w-full (1 col), sm:w-[calc(50%-2rem)] (2 cols), lg:w-[calc(25%-2rem)] (4 cols)
                  This mimics your grid but allows for perfect centering.
               */
-              className="bg-primary rounded-2xl overflow-hidden shadow-lg group w-full sm:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] max-w-[350px]"
+              className="bg-primary overflow-hidden shadow-lg group w-full sm:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] max-w-[350px]"
             >
               <div className="relative overflow-hidden">
                 <img
@@ -51,8 +51,8 @@ const Team = () => {
                 </div>
               </div>
               <div className="p-6 text-center">
-                <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
-                <p className="text-accent text-sm">{member.role}</p>
+                <h3 className="text-xl font-bold text-arvo mb-1 font-arvo">{member.name}</h3>
+                <p className="text-accent text-sm font-open_sans">{member.role}</p>
               </div>
             </motion.div>
           ))}

@@ -13,7 +13,7 @@ const projects = [
   },
   {
     id: 2,
-    title: 'Journey International Consultancy Website',
+    title: 'Journey Consultancy Website',
     category: 'Consutancy Website',
     image: './portfolio/journey_international_consultancy.png',
     description: 'A clean and responsive PHP website, with all functional and live features.',
@@ -34,16 +34,17 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio" className="py-20 bg-primary">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-8 md:px-16">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-          <h2 className="text-indigo-600 font-bold uppercase tracking-widest text-sm mb-3">Portfolio</h2>
-          <h3 className="text-4xl md:text-5xl font-black text-slate-900">
-            Crafting Digital <br />Experiences.
+          viewport={{ once: true, amount : 0.4 }}
+          transition={{duration : 0.6, ease: "easeOut"}}
+          className="mb-16 font-arvo"
+        > 
+          <h2 className="text-gray-500 font-bold uppercase tracking-widest text-sm mb-3">Portfolio</h2>
+          <h3 className="text-4xl md:text-5xl font-black text-accent">
+            Crafting Digital Experiences
           </h3>
         </motion.div>
 
@@ -53,7 +54,7 @@ const Portfolio = () => {
               key={project.id}
               layoutId={`project-${project.id}`}
               onClick={() => setSelectedProject(project)}
-              className="group relative overflow-hidden rounded-2xl cursor-pointer shadow-lg"
+              className="group relative overflow-hidden cursor-pointer shadow-lg"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -62,11 +63,11 @@ const Portfolio = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110 group-hover:blur-sm"
               />
               <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-4">
-                <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
-                <p className="text-accent font-medium">{project.category}</p>
+                <h3 className="text-2xl font-bold text-white mb-2 font-arvo">{project.title}</h3>
+                <p className="text-white font-medium font-open_sans">{project.category}</p>
               </div>
             </motion.div>
           ))}
@@ -101,15 +102,15 @@ const Portfolio = () => {
               />
 
               <div className="p-8">
-                <h3 className="text-3xl font-bold text-gray-900 mb-2">{selectedProject.title}</h3>
-                <p className="text-accent font-medium mb-6">{selectedProject.category}</p>
-                <p className="text-gray-600 leading-relaxed mb-8">
+                <h3 className="text-3xl font-bold text-accent mb-2 font-arvo">{selectedProject.title}</h3>
+                <p className="text-accent font-medium mb-6 font-open_sans">{selectedProject.category}</p>
+                <p className="text-gray-600 leading-relaxed mb-8 font-open_sans">
                   {selectedProject.description}
                 </p>
 
                 <a
                   href={selectedProject.view_page} target='_blank'
-                  className="inline-flex items-center gap-2 bg-accent hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
+                  className="inline-flex items-center gap-2 bg-accent transform hover:scale-105 text-white py-3 px-6  transition-all font-open_sans duration-300 text-sm"
                 >
                   View Project <FaExternalLinkAlt size={14} />
                 </a>

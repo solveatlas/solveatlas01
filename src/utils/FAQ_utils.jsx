@@ -12,10 +12,10 @@ export default function FAQ_utils() {
     return (
         <section className="max-w-4xl mx-auto px-6 py-10 sm:py-10 mt-20">
             <div className="text-center mb-12"> 
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight font-arvo">
                     Frequently Asked Questions
                 </h2>
-                <p className="mt-4 text-lg text-gray-500">
+                <p className="mt-4 text-lg text-gray-500 font-open_sans">
                     Everything you need to know about our product, billing and Team.
                 </p>
             </div>
@@ -24,12 +24,12 @@ export default function FAQ_utils() {
                 {FAQData.map((item, index) => (
                     <div
                         key={index}
-                        className="group border cursor-pointer border-gray-200 rounded-2xl transition-all duration-300 hover:border-black hover:shadow-md overflow-hidden"
+                        className="group border cursor-pointer border-gray-200 transition-all duration-300 hover:border-black hover:shadow-md overflow-hidden"
                     >
                         <button
                             onClick={() => toggleAccordion(index)}
                             className="w-full flex justify-between items-center px-6 py-5 text-left transition-colors bg-white group-hover:bg-blue-50/30 cursor-pointer">
-                            <span className={`text-lg font-semibold transition-colors duration-300 ${activeIndex === index ? "text-black" : "text-gray-800"
+                            <span className={`text-lg font-arvo font-semibold transition-colors duration-300 ${activeIndex === index ? "text-black" : "text-gray-800"
                                 }`}>
                                 {item.question}
                             </span>
@@ -49,7 +49,7 @@ export default function FAQ_utils() {
                                 }`}
                         >
                             <div className="overflow-hidden">
-                                <div className="px-6 pb-6 pt-2 text-gray-600 leading-relaxed border-t border-gray-100/50">
+                                <div className="px-6 font-open_sans pb-6 pt-2 text-gray-600 leading-relaxed border-t border-gray-100/50">
                                     {item.answer}
                                 </div>
                             </div>

@@ -60,9 +60,9 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight"
+          className="text-5xl md:text-6xl font-bold text-accent mb-6 leading-tight font-arvo"
         >
-           Creating <span className="text-accent">Digital Experiences</span>
+           Creating Digital Experiences
           <br /> With Purpose
         </motion.h1>
 
@@ -70,7 +70,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto"
+          className="text-md md:text-md text-gray-600 mb-10 max-w-2xl mx-auto font-open_sans"
         >
           SolveAtlas is a modern web development agency crafting clean, responsive, and high-performance websites for forward-thinking brands.
         </motion.p>
@@ -82,7 +82,7 @@ const Hero = () => {
         >
           <a
             href="#contact"
-            className="inline-block bg-accent hover:bg-gray-800 text-white font-semibold py-4 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300"
+            className="inline-block bg-accent hover:bg-[#2c3e50] text-white py-4 px-8  shadow-lg transform hover:scale-105 transition-all duration-300 font-open_sans text-sm"
           >
             Start Your Project
           </a>
