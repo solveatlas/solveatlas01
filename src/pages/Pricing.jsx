@@ -46,17 +46,17 @@ const AgencyPricing = () => {
   ];
 
   return (
-    <div className="bg-slate-50 py-16 px-4 sm:px-6 lg:px-8 font-sans">
+    <div className="bg-slate-50 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mt-10 mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-block bg-orange-100 text-orange-700 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4">
+          <div className="inline-block font-open_sans bg-orange-100 text-orange-700 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4">
             Limited Time Offer: 40% OFF
           </div>
-          <h1 className="text-4xl md:text-5xl font-black text-slate-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-black text-slate-900 mb-4 font-arvo">
             Web Development Packages
           </h1>
-          <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-600 text-lg max-w-2xl font-open_sans mx-auto">
             Choose the perfect plan to launch your digital presence. Premium quality, now at a discounted price.
           </p>
         </div>
@@ -80,21 +80,21 @@ const AgencyPricing = () => {
                 <div className="p-3 bg-slate-50 rounded-2xl">
                   {React.cloneElement(item.icon, { size: 28 })}
                 </div>
-                <h3 className="text-xl font-bold text-slate-800">{item.name}</h3>
+                <h3 className="text-xl font-bold text-slate-800 font-arvo">{item.name}</h3>
               </div>
 
               <div className="mb-8">
-                <div className="flex items-center gap-2 text-slate-400">
+                <div className="flex items-center gap-2 text-slate-400 font-open_sans">
                   <span className="line-through text-lg font-medium">Rs. {item.original}</span>
                   <span className="bg-red-100 text-red-600 text-xs font-bold px-2 py-0.5 rounded">SAVE 40%</span>
                 </div>
-                <div className="flex items-baseline gap-1 mt-1">
+                <div className="flex items-baseline gap-1 mt-1 font-open_sans">
                   <span className="text-4xl font-black text-slate-900">Rs. {item.sale}</span>
                   <span className="text-slate-500 text-sm font-medium">/project</span>
                 </div>
               </div>
 
-              <ul className="space-y-4 mb-10 flex-1">
+              <ul className="space-y-4 mb-10 flex-1 font-open_sans">
                 {item.features.map((feature, fIdx) => (
                   <li key={fIdx} className="flex items-start gap-3 text-sm text-slate-600">
                     <Check size={18} className="text-emerald-500 mt-0.5 shrink-0" />
@@ -103,7 +103,7 @@ const AgencyPricing = () => {
                 ))}
               </ul>
 
-              <button className={`w-full py-4 rounded-xl font-bold transition-all active:scale-95 ${
+              <button className={`w-full font-open_sans py-4 rounded-xl font-bold transition-all active:scale-95 ${
                 item.popular 
                 ? 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-lg shadow-indigo-200' 
                 : 'bg-slate-900 text-white hover:bg-black'
@@ -115,11 +115,11 @@ const AgencyPricing = () => {
 
           {/* Custom Quote Box */}
           <div className="bg-gradient-to-br from-indigo-600 to-purple-700 rounded-3xl p-8 text-white flex flex-col justify-center items-center text-center md:col-span-2 lg:col-span-1">
-            <h3 className="text-2xl font-bold mb-4">Need something custom?</h3>
-            <p className="text-indigo-100 mb-8 text-sm leading-relaxed">
+            <h3 className="text-2xl font-bold mb-4 font-arvo">Need something custom?</h3>
+            <p className="text-indigo-100 mb-8 text-sm leading-relaxed font-open_sans">
               We build custom enterprise solutions tailored to your specific business requirements.
             </p>
-            <NavLink to='/#contact' className="bg-white text-indigo-700 px-8 py-3 rounded-xl font-bold hover:bg-indigo-50 transition-colors">
+            <NavLink to='/#contact' className="bg-white font-open_sans text-indigo-700 px-8 py-3 rounded-xl font-bold hover:bg-indigo-50 transition-colors">
               Contact Sales
             </NavLink>
           </div>

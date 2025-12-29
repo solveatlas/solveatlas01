@@ -110,7 +110,7 @@ const Navbar = () => {
             // Added bg-secondary here to ensure the whole menu area is colored
             className="md:hidden bg-secondary overflow-hidden flex flex-col"
           >
-            <div className="flex flex-col items-center py-8 space-y-6">
+            <div className="flex flex-col h-full items-center justify-center py-8 space-y-6">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
