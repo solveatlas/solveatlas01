@@ -23,7 +23,7 @@ const team = [
 const Team = () => {
   return (
     <section id="team" className="py-2 bg-secondary">
-      <div className="container mx-auto px-8 md:px-16">
+      <div className="container mx-auto px-5 sm:px-8 md:px-16">
 
         <div className="flex flex-wrap justify-center gap-8">
           {team.map((member, index) => (

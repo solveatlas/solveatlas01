@@ -43,7 +43,7 @@ const Portfolio = () => {
           className="mb-16 font-arvo"
         > 
           <h2 className="text-gray-500 font-bold uppercase tracking-widest text-sm mb-3">Portfolio</h2>
-          <h3 className="text-4xl md:text-5xl font-black text-accent">
+          <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-accent">
             Crafting Digital Experiences
           </h3>
         </motion.div>
@@ -101,7 +101,7 @@ const Portfolio = () => {
                 className="w-full h-80 object-cover"
               />
 
-              <div className="p-8">
+              <div className="p-5 sm:p-8">
                 <h3 className="text-3xl font-bold text-accent mb-2 font-arvo">{selectedProject.title}</h3>
                 <p className="text-accent font-medium mb-6 font-open_sans">{selectedProject.category}</p>
                 <p className="text-gray-600 leading-relaxed mb-8 font-open_sans">

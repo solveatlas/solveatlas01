@@ -96,9 +96,9 @@ const Contact = () => {
       <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-gray-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 
-      <div className="container mx-auto px-8 md:px-16 relative z-10">
+      <div className="container mx-auto px-5 sm:px-8 md:px-16 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-accent mb-4 font-arvo">Get In Touch</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-accent mb-4 font-arvo">Get In Touch</h2>
           <p className="text-gray-600 max-w-xl mx-auto font-open_sans">
             Have a project in mind? Let's discuss how we can help you achieve your goals.
           </p>
@@ -113,10 +113,10 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             className="space-y-8"
           >
-            <div className="bg-secondary/50 p-8 border border-gray-200">
+            <div className="bg-secondary/50 p-5 sm:p-8 border border-gray-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-6 font-arvo">Contact Information</h3>
               <div className="space-y-6">
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-2 sm:gap-4">
                   <div className="bg-accent/20 p-3  text-accent">
                     <FaEnvelope size={20} />
                   </div>
@@ -125,7 +125,7 @@ const Contact = () => {
                     <p className="text-gray-600 font-open_sans">solveatlas.agency@gmail.com</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-2 sm:gap-4">
                   <div className="bg-accent/20 p-3  text-accent">
                     <FaPhone size={20} />
                   </div>
@@ -134,7 +134,7 @@ const Contact = () => {
                     <p className="text-gray-600 font-open_sans">+977 9826197196 / 9762748494</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-2 sm:gap-4">
                   <div className="bg-accent/20 p-3  text-accent">
                     <FaMapMarkerAlt size={20} />
                   </div>
@@ -153,7 +153,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-secondary p-8 shadow-lg border border-gray-200"
+            className="bg-secondary p-4 sm:p-8 shadow-lg border border-gray-200"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -167,7 +167,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className={`w-full bg-white border border-gray-300  px-4 py-3 text-gray-900 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors  ${errors.name ? "border-red-500" : "border-gray-300"}
+                  className={`w-full bg-white border border-gray-300 px-2 sm:px-4 py-3 text-gray-900 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors  ${errors.name ? "border-red-500" : "border-gray-300"}
 `}
                   placeholder="John Doe"
                 />
@@ -183,7 +183,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className={`w-full bg-white border  px-4 py-3 text-gray-900
+                  className={`w-full bg-white border px-2 sm:px-4 py-3 text-gray-900
                     ${errors.email ? "border-red-500" : "border-gray-300"}
                      focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent`}
 
@@ -201,7 +201,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows="4"
-                  className={`w-full bg-white border  px-4 py-3 text-gray-900
+                  className={`w-full bg-white border px-2 sm:px-4 py-3 text-gray-900
                 ${errors.message ? "border-red-500" : "border-gray-300"}
                 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent`}
 

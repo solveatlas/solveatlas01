@@ -139,10 +139,10 @@ const Testimonials = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="mb-16 font-arvo"
+          className="mb-8 sm:mb-16 font-arvo"
         >
           <h2 className="text-gray-500 font-bold uppercase tracking-widest text-sm mb-3">Client Stories</h2>
-          <h3 className="text-4xl md:text-5xl font-black text-slate-900">
+          <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900">
             Trusted By Businesses <br /> Across The Country
           </h3>
         </motion.div>
@@ -160,7 +160,7 @@ const Testimonials = () => {
               key={idx}
               variants={cardVariants}
               whileHover={{ y: -8, transition: { duration: 0.2 } }}
-              className={`relative p-8  bg-slate-50 border border-slate-100 hover:shadow-2xl hover:bg-white transition-colors duration-300 flex flex-col justify-between ${review.size === 'large' ? 'md:col-span-2' : ''
+              className={`relative p-5 sm:p-8 bg-slate-50 border border-slate-100 hover:shadow-2xl hover:bg-white transition-colors duration-300 flex flex-col justify-between ${review.size === 'large' ? 'md:col-span-2' : ''
                 }`}
             >
               <Quote className="absolute top-8 right-8 text-slate-200" size={40} />
